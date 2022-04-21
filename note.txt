@@ -1,0 +1,74 @@
+Minh se lam web demo mua ban nho:
+Tao table user gom: email, pass, name va avatar, lam 2 tinh nang sau:
+- login: email, pass
+- register: email, pass, name, avatar
+
+
+- khi login xong thi:
+ + tren menu header, hide menu login va register, 
+ show menu logout len va click logout thi thoat dang nhap(xoa all session) va nhay ve lai trang login.
+ + xuat hien them menu account (vao trang ca nhan cua member)
+   ++ click vao menu accoutn thi vao trang ca nhan cua no nhuw hinh tren: 
+    +++ ben trai co 2 menu la account va my product.
+    +++ ben phai la form hien thi thong tin cua member, va cho phep update thong tin ca nhan.
+
+- click vao my product thi nhay vao trang list product cua member do, neu k co product thi hien thi k co product nao.
+  ++ click vao add thi nhay qua trang add.php cho phep dk product de ban' hang.
+  ++ tao table product nhu sau: id, title, price, image.
+  ++ form dk product thi co: title, price va image.
+  ++ sau khi dk xong thi nhay vetrang lisst product va show het product cua member do ra.
+ ++ click vao edit thi nhay sang trang edit.php de chinh sua product.
+ ++ click delete thi xoa product do di.
+
+web mua ban, cho phep thanh vien vao dk product, de show product ra ban hang.
+co 1 trang profile , de chinh sua thong tin ca nhan va dk product de ban.
+
+https://www.w3schools.com/php/func_string_md5.asp
+
+$pass = md5($pass)
+ 
+ select * form user where email = $email and pass = $pass
+
+--------------------------------
+
+ <a>click</a>
+
+<!-- giong form:
+method
+url
+data -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+			$("a").click(function(){
+				var abc = 1;
+				var xxx = 2;
+
+
+				$.ajax({
+					method: "POST",
+					url: "ajax.php",
+					data: {
+						abc: abc,
+						xxx: xxx
+					},
+					success : function(response){
+						// ket qua ben php tra ve lai
+						console.log(response);
+					}
+				});
+
+
+			});
+		});	
+</script>
+<!-- mua hang bang php nhung k load lai trang (dung js)
+
+khi click mua thi dung js lay id <=>js ajax <=> qua php (viet sql lay all thong tin ra va dua SS)
+
+frontend <=> ajax (k load trang, han chay ngam ben duoi) <=> backend
+ -->
+img,
+price
+name
+qty:1
